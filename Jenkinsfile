@@ -64,23 +64,19 @@ docker push $IMAGE:latest
 
 }
 
-
 stage('Run RNA-seq Pipeline') {
-
-steps {
-
-sh '''
-
-docker run --rm \
-$IMAGE:$BUILD_NUMBER \
---cores 4
-
-'''
-
+    steps {
+        sh '''
+        docker run \
+        --rm \
+        -v $(pwd)/data:/workflow/data \
+        -v $(pwd)/resources:/workflow/resources \
+        -v $(pwd)/results:/workflow/results \
+        $IMAGE:$BUILD_NUMBER \
+        --cores 4
+        '''
+    }
 }
-
-}
-
 
 }
 
