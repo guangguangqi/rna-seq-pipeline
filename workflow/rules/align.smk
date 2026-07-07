@@ -1,5 +1,4 @@
 rule star_align:
-
     input:
         fastq="data/{sample}.fastq.gz"
 
@@ -24,4 +23,3 @@ rule star_align:
             --outFileNamePrefix results/aligned/{wildcards.sample} \
             --outSAMtype BAM SortedByCoordinate
         """
-
