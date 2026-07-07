@@ -23,4 +23,5 @@ rule star_align:
             --readFilesCommand zcat \
             --outFileNamePrefix results/aligned/{wildcards.sample} \
             --outSAMtype BAM SortedByCoordinate
+        """
 
