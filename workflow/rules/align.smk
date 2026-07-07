@@ -17,11 +17,10 @@ rule star_align:
         mkdir -p results/aligned
 
         STAR \
-        --runThreadN {threads} \
-        --genomeDir {config[star_index]} \
-        --readFilesIn {input.fastq} \
-        --readFilesCommand zcat \
-        --outFileNamePrefix results/aligned/{wildcards.sample} \
-        --outSAMtype BAM SortedByCoordinate
-        """
+            --runThreadN {threads} \
+            --genomeDir {config[star_index]} \
+            --readFilesIn {input.fastq} \
+            --readFilesCommand zcat \
+            --outFileNamePrefix results/aligned/{wildcards.sample} \
+            --outSAMtype BAM SortedByCoordinate
 
