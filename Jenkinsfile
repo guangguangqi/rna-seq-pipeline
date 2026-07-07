@@ -67,12 +67,11 @@ docker push $IMAGE:latest
 stage('Run RNA-seq Pipeline') {
     steps {
         sh '''
-        docker run --rm \
-          -v /home/qiqi5/HHH/k8s-open/data:/workflow/data \
-          -v /home/qiqi5/HHH/k8s-open/resources:/workflow/resources \
-          -v /home/qiqi5/HHH/k8s-open/results:/workflow/results \
-          $IMAGE:$BUILD_NUMBER \
-          --cores 4
+        docker run \
+        --rm \
+        -v $(pwd):/workflow \
+        $IMAGE:$BUILD_NUMBER \
+        --cores 4
         '''
     }
 }
