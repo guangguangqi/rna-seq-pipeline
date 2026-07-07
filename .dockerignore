@@ -1,0 +1,8 @@
+.git
+results/
+.snakemake/
+*.pyc
+__pycache__/
+resources/reference/_STARtmp
+resources/reference/star_index/
+

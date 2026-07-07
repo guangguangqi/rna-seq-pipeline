@@ -1,0 +1,34 @@
+# Authentication / secrets
+token.json
+client_secrets.json
+
+# Snakemake working files
+.snakemake/
+
+# Results and logs
+results/
+logs/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Sequencing data (large files)
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Alignment files
+*.bam
+*.bai
+*.sam
+*.cram
+*.crai
+
+# STAR temporary files
+resources/reference/_STARtmp/
+
+# OS files
+.DS_Store
+
