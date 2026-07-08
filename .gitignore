@@ -13,11 +13,16 @@ logs/
 __pycache__/
 *.pyc
 
-# Sequencing data (large files)
+
+# Ignore large sequencing files everywhere
 *.fastq
 *.fastq.gz
 *.fq
 *.fq.gz
+
+# But keep small CI test data
+!data/
+!data/*.fastq.gz
 
 # Alignment files
 *.bam
